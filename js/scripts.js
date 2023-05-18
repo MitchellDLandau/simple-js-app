@@ -10,10 +10,13 @@ let pokemonList = [
     {name: "Horsea", height: "0.4", type: "Water"},
     {name: "Togepi", height: "0.3", type: "Fairy"}
   ]
-  
+
+  //I added this to loop through showing different pokemon and their heights.
+
   for (let i = 0; i < pokemonList.length; i++) {
     document.write("\n" + pokemonList[i].name);
     document.write(" (height = " + pokemonList[i].height + "), " + "\n");
+    //This gives each height another note after it is shown.
     if (pokemonList[i].height > 0.65) {
       document.write("Huge Pokemon" + "\n")
     } 

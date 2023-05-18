@@ -14,6 +14,16 @@ let pokemonList = [
   for (let i = 0; i < pokemonList.length; i++) {
     document.write("\n" + pokemonList[i].name);
     document.write(" (height = " + pokemonList[i].height + "), " + "\n");
-  }
+    if (pokemonList[i].height > 0.65) {
+      document.write("Huge Pokemon" + "\n")
+    } 
+      else if (pokemonList[i].height > 0.45 && pokemonList[i].height < 0.65) {
+      document.write("Average Pokemon" + "\n");
+    }
+      else if (pokemonList[i].height < 0.45) {
+      document.write("Just a Little Guy" + "\n");
+      }
+    }
+  
 
   

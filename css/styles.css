@@ -1,0 +1,21 @@
+:root {
+--body-text-color: darkgreen;
+--background-color: ivory;
+--title-color: #C2A000;
+}
+
+body {
+    background-color: var(--background-color);
+    text-align: center;
+    color: var(--title-color);
+}
+
+main {
+    white-space: pre-wrap;
+    color: var(--body-text-color);
+    font-weight: bold;
+    border: solid var(--body-text-color);
+    border-radius: 10px;
+    padding: 0 30px;
+    display:inline-block;
+}

@@ -1,17 +1,34 @@
 :root {
 --body-text-color: darkgreen;
 --background-color: ivory;
+--background-edge: #FFFAD1;
 --title-color: #C2A000;
 }
 
-header {
-    border-bottom: 3px solid var(--body-text-color)
+.pokeball {
+    width: 100px;
+    height: auto;
+    float: left;
+    position: relative;
+    top: 10px;
+}
+
+.title-pokedex {
+    position: relative;
+    top: 10px;
+    right: 50px;
 }
 
 body {
-    background-color: var(--background-color);
+    background: linear-gradient(90deg, var(--background-edge), var(--background-color) 50%, var(--background-edge));
     text-align: center;
     color: var(--title-color);
+}
+
+hr {
+	border: 0;
+	height: 3px;
+	background-image: linear-gradient(to right, rgba(0, 100, 0, 1), rgba(0, 100, 0, 0.75), rgba(0, 100, 0, 0));
 }
 
 main {
@@ -23,4 +40,12 @@ main {
     padding: 0 30px;
     display:inline-block;
     margin: 15px;
+    position: relative;
+    right: 50px;
+}
+
+@media all and (max-width: 500px) {
+  main {
+    float: right;
+  }
 }

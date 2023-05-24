@@ -27,7 +27,7 @@ let pokemonList = [
 
 })(); //IIFE to be able to keep all information within safe from interference so it can be called uppon in the future.
 
-//pokemonRepository.add({name: 'Loki Bean', height: '0.3', type: 'Dog'});
+pokemonRepository.add({name: 'Loki Bean', height: '0.3', type: 'Dog'});
 
  pokemonRepository.getAll().forEach(function(pokemon) {  //function to write the array to the document using forEach and keys (getAll) to access the information in IIFE
     document.write('<p>' + pokemon.name + ' who is ' + pokemon.height + ' meters tall' + '</p>');
@@ -42,7 +42,6 @@ let pokemonList = [
       document.write("<h4>" + "Just a Little Guy" + "</h4>");
      }})
 
-     pokemonRepository.add({name: 'Loki Bean', height: '0.3', type: 'Dog'});
   
 /*
   Old Code I am keeping for reference and will delete before posting final project

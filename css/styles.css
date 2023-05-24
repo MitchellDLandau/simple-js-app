@@ -44,6 +44,14 @@ main {
     right: 50px;
 }
 
+p {
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: var(--title-color);
+}
+
 @media all and (max-width: 500px) {
   main {
     float: right;

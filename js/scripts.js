@@ -20,11 +20,11 @@ let pokemonList = [
     return pokemonList;
   }
 
-  function showDetails(pokemon) {
+  function showDetails(pokemon) {  //function that will print the pokemon information to the console log when a pokemon is clicked.
     console.log(pokemon);
   }
 
-  function addListItem(pokemon) {
+  function addListItem(pokemon) {  //crates buttons for every pokemon in the array. 
     let ListOfPokemon = document.querySelector('.pokemon-list');  
     let aPokemon = document.createElement('li');
     let button = document.createElement('button');
@@ -40,7 +40,6 @@ let pokemonList = [
     getAll: getAll,
     addListItem: addListItem  //Keys to be able to call on a function to be performed.
   };
-
 })(); //IIFE to be able to keep all information within safe from interference so it can be called uppon in the future.
 
 console.log(pokemonRepository.getAll());

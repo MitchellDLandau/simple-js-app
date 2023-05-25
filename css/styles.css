@@ -26,7 +26,7 @@ body {
 
 hr {
 	border: 0;
-	height: 3px;
+	height: 5px;
 	background-image: linear-gradient(to right, rgba(0, 100, 0, 1), rgba(0, 100, 0, 0.75), rgba(0, 100, 0, 0));
 }
 
@@ -53,10 +53,12 @@ ul {
     color: var(--body-text-color);
     font-size: 20px;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px var(--body-text-color)
 }
 
 .button-class:hover {
-    background-color: var(--background-edge)
+    background-color: var(--background-edge);
+    box-shadow: 5px 5px 5px var(--title-color)
 }
 
 @media all and (max-width: 500px) {
@@ -65,45 +67,3 @@ ul {
      width: 80%;
     }
 }
-
-
-
-
-/*main {
-    display: inline-block;
-    padding: 10px 30% 10px 30%;
-    white-space: pre-wrap;
-    position: relative;
-    right: 8%;
-}
-
-ul {
-    list-style-type: none;
-    list-style-position: inside;  
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-li {
-
-}
-
-.button-class {
-    color: var(--body-text-color);
-    background-color: var(--background-color);
-    padding: 20px;
-    margin: 5px;
-    border-radius: 10px;
-    border: solid var(--body-text-color);
-    font-weight: bold;
-
-
-}
-
-@media all and (max-width: 500px) {
-  main {
-    float: right;
-  }
-}
-*/

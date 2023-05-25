@@ -21,7 +21,7 @@ let pokemonList = [
   }
 
   function showDetails(pokemon) {
-    console.log(pokemon)
+    console.log(pokemon);
   }
 
   function addListItem(pokemon) {
@@ -30,6 +30,7 @@ let pokemonList = [
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('button-class');
+    button.addEventListener('click', showDetails);
     aPokemon.appendChild(button);
     ListOfPokemon.appendChild(aPokemon);
   }

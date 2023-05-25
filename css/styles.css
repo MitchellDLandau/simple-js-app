@@ -21,7 +21,6 @@
 
 body {
     background: linear-gradient(90deg, var(--background-edge), var(--background-color) 50%, var(--background-edge));
-    text-align: center;
     color: var(--title-color);
 }
 
@@ -31,25 +30,75 @@ hr {
 	background-image: linear-gradient(to right, rgba(0, 100, 0, 1), rgba(0, 100, 0, 0.75), rgba(0, 100, 0, 0));
 }
 
-main {
-    white-space: pre-wrap;
-    color: var(--body-text-color);
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin-top: 50px;
+}
+
+.button-class {
+    display: block;
+    width: 90%;
+    margin: 10px;
+    padding: 20px;
     font-weight: bold;
     border: solid var(--body-text-color);
+    background-color: var(--background-color);
+    color: var(--body-text-color);
+    font-size: 20px;
     border-radius: 10px;
-    padding: 0 30px;
-    display:inline-block;
-    margin: 15px;
+}
+
+.button-class:hover {
+    background-color: var(--background-edge)
+}
+
+@media all and (max-width: 500px) {
+    .button-class {
+     display:block;
+     width: 80%;
+    }
+}
+
+
+
+
+/*main {
+    display: inline-block;
+    padding: 10px 30% 10px 30%;
+    white-space: pre-wrap;
     position: relative;
-    right: 50px;
+    right: 8%;
 }
 
-p {
-    margin-bottom: 15px;
+ul {
+    list-style-type: none;
+    list-style-position: inside;  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-h4 {
-    color: var(--title-color);
+li {
+
+}
+
+.button-class {
+    color: var(--body-text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    border: solid var(--body-text-color);
+    font-weight: bold;
+
+
 }
 
 @media all and (max-width: 500px) {
@@ -57,3 +106,4 @@ h4 {
     float: right;
   }
 }
+*/

@@ -20,6 +20,10 @@ let pokemonList = [
     return pokemonList;
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon)
+  }
+
   function addListItem(pokemon) {
     let ListOfPokemon = document.querySelector('.pokemon-list');  
     let aPokemon = document.createElement('li');
@@ -45,39 +49,3 @@ pokemonRepository.add({name: 'Loki Bean', height: '0.3', type: 'Dog'});
   pokemonRepository.addListItem(pokemon);
 
  });
-
-
-
-/*    document.write('<p>' + pokemon.name + ' who is ' + pokemon.height + ' meters tall' + '</p>');
-    document.write
-    if (pokemon.height > 0.65) {
-      document.write("<h4>" + "Huge Pokemon" + "</h4>")
-    } 
-      else if (pokemon.height > 0.45 && pokemon.height < 0.65) {
-      document.write("<h4>" + "Average Pokemon" + "</h4>");
-    }
-      else if (pokemon.height < 0.45) {
-      document.write("<h4>" + "Just a Little Guy" + "</h4>");
-     }})
-*/
-  
-/*
-  Old Code I am keeping for reference and will delete before posting final project
-  //I added this to loop through showing different pokemon and their heights.
-
-  for (let i = 0; i < pokemonList.length; i++) {
-    document.write("<p>" + pokemonList[i].name);
-    document.write(" (height = " + pokemonList[i].height + "), " + "</p>");
-    //This gives each height another note after it is shown.
-    if (pokemonList[i].height > 0.65) {
-      document.write("<h4>" + "Huge Pokemon" + "</h4>")
-    } 
-      else if (pokemonList[i].height > 0.45 && pokemonList[i].height < 0.65) {
-      document.write("<h4>" + "Average Pokemon" + "</h4>");
-    }
-      else if (pokemonList[i].height < 0.45) {
-      document.write("<h4>" + "Just a Little Guy" + "</h4>");
-      }
-    }
-*/
-    

@@ -1,6 +1,5 @@
 # simple-js-app
  Simple application to learn javascript
- 
- I have entered different pokemon in as variables to be reviewed in JavaScript.
 
- There is a loop to retrieve information as well as make different notes depending on different factors with regards to the variables.
+using an external API I am accessing and displaying different information with regards to their names and other attributes.
+Using IIFE to secure information as well as loops to cycle through all of the pokemon in the list. 

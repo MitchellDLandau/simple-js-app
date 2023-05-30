@@ -20,19 +20,20 @@ let pokemonList = [
     return pokemonList;
   }
 
-  function showDetails(pokemon) {  //function that will print the pokemon information to the console log when a pokemon is clicked.
-    console.log(pokemon);
+  function showDetails(statistics) {  //function that will print the pokemon information to the console log when a pokemon is clicked.
+    console.log(statistics);
   }
 
   function addListItem(pokemon) {  //crates buttons for every pokemon in the array. 
-    let ListOfPokemon = document.querySelector('.pokemon-list');  
+    let listOfPokemon = document.querySelector('.pokemon-list');  
     let aPokemon = document.createElement('li');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('button-class');
-    button.addEventListener('click', showDetails);
+    button.addEventListener('click', () => showDetails(pokemon) //sends the pokemon as its parameter to the showDetails function to return information to the console.
+);
     aPokemon.appendChild(button);
-    ListOfPokemon.appendChild(aPokemon);
+    listOfPokemon.appendChild(aPokemon);
   }
 
   return {
@@ -47,5 +48,4 @@ pokemonRepository.add({name: 'Loki Bean', height: '0.3', type: 'Dog'});
 
  pokemonRepository.getAll().forEach(function (pokemon) {  //function to write the array to the document using forEach and keys (getAll) to access the information in IIFE
   pokemonRepository.addListItem(pokemon);
-
  });

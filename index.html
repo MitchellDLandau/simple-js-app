@@ -15,7 +15,16 @@
         <hr>
     </header>
      <main>
-        <ul class="pokemon-list"></ul>
+        <div class="poke-modal">
+            <!-- <button id="show-modal">show modal</button> -->
+            <div id="modal-container"></div>
+        </div>
+        <!-- Changed the above button to id modal-containter instead of id show-modal -->
+        <div class="poke-list">
+            <ul class="pokemon-list"></ul>
+        </div>
+        <script src="./js/promise-polyfill.js"></script>
+        <script src="./js/fetch-polyfill.js"></script>
        <script src="js/scripts.js"></script>
     </main>
 </body>

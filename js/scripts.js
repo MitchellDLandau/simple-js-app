@@ -60,8 +60,6 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     }
   });
 
-//Modal was entered above here however it is still within the IIFE
-
   function add(pokemonAdd) {   //function to be able to add a pokemon to the array.
     pokemonList.push(pokemonAdd);
   }
@@ -76,9 +74,8 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
       showModal(//function that calls to the Modal that will show the information for the Pokemon.
         pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1),
         'Type: ' + pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1) || 'Type: ' + pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1) + ' and ' + pokemon.types[1].type.name.charAt(0).toUpperCase() + pokemon.types[1].type.name.slice(1), 
-        'Height: ' + pokemon.height,
+        'Height: ' + pokemon.height + "ft",
          pokemon.imageUrl);
-        // pokemon.details.sprites.front_default);
     });
   }
 

@@ -70,12 +70,15 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function showDetails(pokemon) {  //function that will print the pokemon information to the console log when a pokemon is clicked.
     loadDetails (pokemon).then(function(){
-      console.log(pokemon)
-      showModal(//function that calls to the Modal that will show the information for the Pokemon.
-        pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1),
-        'Type: ' + pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1) || 'Type: ' + pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1) + ' and ' + pokemon.types[1].type.name.charAt(0).toUpperCase() + pokemon.types[1].type.name.slice(1), 
-        'Height: ' + pokemon.height + "ft",
-         pokemon.imageUrl);
+      // console.log(pokemon)
+      let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
+      let typeList = '';
+      pokemon.types.forEach((type) => {
+        if(type.slot == 1) typeList += 'Type: ' + type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
+        else typeList += ' and ' + type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
+      });
+      let height = 'Height: ' + pokemon.height + 'ft';
+      showModal(name, typeList, height, pokemon.imageUrl)//function that calls to the Modal that will show the information for the Pokemon.
     });
   }
 

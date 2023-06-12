@@ -26,9 +26,9 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     pokeImage.attr("src", img);
 
     modalTitle.append(pokeName);
-    modalBody.append(pokeType)
     modalBody.append(pokeHeight);
     modalBody.append(pokeWeight);
+    modalBody.append(pokeType);
     modalBody.append(pokeAbilities);
     modalBody.append(pokeImage);
   }
@@ -55,7 +55,7 @@ let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
       let abilityList = '';
       pokemon.abilities.forEach((ability) => {
         if(ability.slot == 1) abilityList += 'Abilities: ' + ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1);
-        else abilityList += ' and ' + ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1);
+        else abilityList += ', ' + ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1);
       });
       showModal(name, typeList, height, weight, abilityList, pokemon.imageUrl)//function that calls to the Modal that will show the information for the Pokemon.
     });

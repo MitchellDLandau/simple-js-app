@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=200';
 
     function showModal (name, type, height, weight, ability, img) {
   
@@ -109,7 +109,34 @@ let pokemonRepository = (function () {
         console.log(e);
       });
     }
-  
+
+    const searchItem = () => {
+
+      let searchInput = document.getElementById('input-search').value.toLowerCase();
+      let pokeArray = document.querySelectorAll('.list-group-item');
+
+      pokeArray.forEach(pokemon=> {
+
+        let listItem = pokemon.querySelector('.btn').innerText.toLowerCase();
+        let searchList = document.querySelector('.pokemon-list');
+
+        if(listItem.includes(searchInput)) {
+          searchList.classList.add('visible');
+          
+        } else {
+          pokemon.classList.add('not-visible');
+        }
+
+        if(!searchInput) {
+          pokemon.classList.remove('not-visible');
+        }
+
+      });
+    }
+
+    let searchInput = document.getElementById('input-search');
+      searchInput.addEventListener('input', () => searchItem());
+
     return {
       add: add,
       getAll: getAll,

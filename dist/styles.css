@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --body-text-color: darkgreen;
   --background-color: ivory;
@@ -34,14 +41,20 @@
   }
   
   .title-pokedex {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-self: center;
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
       top: 10px;
       right: 50px;
       text-decoration: underline;
   }
   
   body {
+      background: -webkit-gradient(linear, left top, right top, from(var(--background-edge)), color-stop(50%, var(--background-color)), to(var(--background-edge)));
+      background: -o-linear-gradient(left, var(--background-edge), var(--background-color) 50%, var(--background-edge));
       background: linear-gradient(90deg, var(--background-edge), var(--background-color) 50%, var(--background-edge));
       color: var(--title-color);
       margin-top: 150px;
@@ -72,12 +85,14 @@
       color: var(--body-text-color);
       font-size: 20px;
       border-radius: 10px;
-      box-shadow: 3px 3px 3px var(--body-text-color)
+      -webkit-box-shadow: 3px 3px 3px var(--body-text-color);
+              box-shadow: 3px 3px 3px var(--body-text-color)
   }
   
   .button-class:hover {
       background-color: var(--navigation-bar);
-      box-shadow: 5px 5px 5px var(--title-color);
+      -webkit-box-shadow: 5px 5px 5px var(--title-color);
+              box-shadow: 5px 5px 5px var(--title-color);
       color: var(--title-color);
   }
   
@@ -86,7 +101,9 @@
   }
   
   .pokemon-list {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
   
@@ -108,6 +125,7 @@
   
   @media all and (min-width: 362px) and (max-width: 512px) {
       .pokemon-list {
+       -ms-grid-columns: 1fr;
        grid-template-columns: 1fr;
       }
   
@@ -127,6 +145,7 @@
   
   @media all and (min-width: 500px) and (max-width: 750px) {
     .pokemon-list {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
   
@@ -152,6 +171,7 @@
     }
 
     .pokemon-list {
+      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
   }
